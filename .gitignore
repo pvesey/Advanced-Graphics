@@ -45,3 +45,24 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+<<<<<<< HEAD
+
+# Files that are not necessary for repo
+*.pdf
+*.aux
+*.out
+*.snm
+*.log
+*.toc
+*.vrb
+*.nav
+*.sublime-project
+=======
+#Latex Files
+*.toc
+*.nav
+*.out
+*.vrb
+*.log
+>>>>>>> refs/remotes/origin/reveal
