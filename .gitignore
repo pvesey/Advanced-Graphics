@@ -65,4 +65,5 @@ Temporary Items
 *.out
 *.vrb
 *.log
+*.bak
 >>>>>>> refs/remotes/origin/reveal
