@@ -66,4 +66,13 @@ Temporary Items
 *.vrb
 *.log
 *.bak
+*.bbl
+*.acn
+*.blg
+*.idx
+*.ilg
+*.gz
+*.xdy
+*.ind
+
 >>>>>>> refs/remotes/origin/reveal
