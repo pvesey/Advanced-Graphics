@@ -1336,7 +1336,7 @@ Spending time on the final finish can greatly enhance the impact of a 3D printed
 \begin{itemize}
 	\item Put WTK file into a folder named '3DMODEL' on USB Drive
 	\item Insert USB into 3D printer. Use touchscreen interface on printer to select WTK file.
-	\item Press 'Print' on 3D printer.
+	\item Press `Print' on 3D printer.
 	\item DO NOT LEAVE PRINTER UNATTENDED.
 \end{itemize}
 \end{frame}
@@ -1351,6 +1351,20 @@ Spending time on the final finish can greatly enhance the impact of a 3D printed
 \title[Materials \& Shaders]{Materials \& Shaders}
 \titlepage
 \end{frame}\begin{center}\line(1,0){250}\end{center}
+
+
+
+
+\begin{frame}
+	\frametitle{V-Ray Materials}
+	VRay can handle Standard Materials, Autodesk Materials, and its own native materials.\\
+	For best results, use V-Ray Materials.\\
+	V-Ray material type is \textit{.vrmat}\\
+	Legacy V-Ray materials are \textit{.vismat} - these should be changed to \textit{.vrmat} using the V-Ray material editor tool.\\
+	Revit for V-Ray does not support the old \textit{.vismat} format, so you must convert first.
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
 
 Materials are linked to rendering engine
 
@@ -1384,11 +1398,341 @@ Special Materials
 \end{frame}\begin{center}\line(1,0){250}\end{center}
 
 
+\begin{frame}
+	\frametitle{Compositing}
+	Straight renders from within any rendering engine usually require some form of post processing.\\
+	A key activity is compositing; a process whereby several components are edited in photoshop to create a better final image.\\
+	If compositing is a part of the workflow, it is important to create appropriate images at render time.\\
+	Each image for compositing is typically called a `pass' or a channel
+	
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+\begin{frame}
+	\frametitle{Typical Channels}
+	\begin{itemize}
+		\item Beauty Pass
+		\item Diffuse Channel
+		\item Alpha Channel
+		\item Specular Channel
+		\item Lighting Channel
+		\item Global Illumination Channel
+		\item Bump Map or Bump Normals
+		\item AO Pass
+		\item Reflection Channel
+		\item Refraction Channel
+		\item Depth Map
+	\end{itemize}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+
+\begin{frame}
+\frametitle{Render Channels}
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm]{./img/Rendering/SittingRoomFinal.png}
+	\caption[Final Image (V-Ray composite)]{Final Image (V-Ray composite)}
+	\label{fig:sittingroomfinalBeauty}
+\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+\begin{frame}
+\frametitle{Render Channels}
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm]{./img/Rendering/SittingRoomFinalDiffuse.png}
+	\caption[Diffuse (Main Color) Channel)]{Diffuse (Main Color) Channel)}
+	\label{fig:sittingroomfinalDiffuse}
+\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+
+\begin{frame}
+\frametitle{Render Channels}
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm]{./img/Rendering/SittingRoomFinalAlpha.png}
+	\caption[Alpha (tranparencty) Channel]{Alpha (tranparencty) Channel}
+	\label{fig:sittingroomfinalAlpha}
+\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Render Channels}
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm]{./img/Rendering/SittingRoomFinalSpecular.png}
+	\caption[Specular (highlights) Channel]{Specular (highlights) Channel}
+	\label{fig:sittingroomfinalSpecular}
+\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+\begin{frame}
+\frametitle{Render Channels}
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm]{./img/Rendering/SittingRoomFinalLighting}
+	\caption[Lighting]{Lighting}
+	\label{fig:sittingroomfinalLighting}
+\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Render Channels}
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm]{./img/Rendering/SittingRoomFinalGlobal_Illumination.png}
+	\caption[Global Illumination (Bounced Light)]{Global Illumination (Bounced Light)}
+	\label{fig:sittingroomfinalGlobalIllumination}
+\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Render Channels}
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm]{./img/Rendering/SittingRoomFinalReflection}
+	\caption[Reflection Channel]{Reflection Channel}
+	\label{fig:sittingroomfinalReflection}
+\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+\begin{frame}
+\frametitle{Render Channels}
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm]{./img/Rendering/SittingRoomFinalRefraction.png}
+	\caption[Refraction Channell - typically through glass]{Refraction Channell - typically through glass}
+	\label{fig:sittingroomfinalRefraction}
+\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+\begin{frame}
+\frametitle{Render Channels}
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm]{./img/Rendering/SittingRoomFinalNormals.png}
+	\caption[Normal Map - used to simplify 3D]{Normal Map - used to simplify 3D}
+	\label{fig:sittingroomfinalNormal}
+\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+\begin{frame}
+\frametitle{Render Channels}
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm]{./img/Rendering/SittingRoomFinalBump_Normal.png}
+	\caption[Bump Normals - used to simplify 3D]{Bump Normals - used to simplify 3D}
+	\label{fig:sittingroomfinalBumpNormal}
+\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+\begin{frame}
+\frametitle{Render Channels}
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm]{./img/Rendering/SittingRoomFinalSelf_Illumination.png}
+	\caption[Self Illuminating objects (typically generated by Self Illumunating Materials)]{Self Illuminating objects (typically generated by Self Illumunating Materials)}
+	\label{fig:sittingroomfinalSelfIllumination}
+\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+
+
+
+
+
+\begin{frame}
+	\frametitle{Render Time}
+	Rendering is very processor intensive.  It is often the case that render farms are used by large ArchViz firms, and by film studios.  The film \textit{Avatar} used a 32,000 processor render farm from Weta Digital.\\
+	There are strategies that you can employ to cut down your render times.  It requires a bit of planning, but it is worth the effort.\\
+	If you are creating animations, you can save huge amounts of time.
+	
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+\begin{frame}
+\frametitle{Render Time}
+\begin{itemize}
+	\item \textbf{Minimise the workload} - Turn off any object that is not in camera view, and will not impact the illumination.  In Revit, this may involve creating a section box
+	\item \textbf{Minimise Effects} - DoF, Fog, Vignette and other effects add a considerably to render time.  It is often better to deal with these in post-production.
+	\item \textbf{Materials} - Try to use materials specific to the rendering engine.  Also, choose your material resolution carefully, do not have hi-res were it will not be seen in the final image.
+\end{itemize}
+
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+
+
+
+
+
 \section{Project Setup}
 \begin{frame}
 \title[Project Setup]{Project Setup}
 \titlepage
 \end{frame}\begin{center}\line(1,0){250}\end{center}
+
+
+
+
+
+\section{Modelling}
+\begin{frame}
+	\title[Modelling]{Modelling}
+	\titlepage
+\end{frame}\begin{center}\line(1,0){250}\end{center}
+
+
+\section{Perspective Matching}
+\begin{frame}
+	\title[Perspective Matching]{Perspective Matching}
+	\titlepage
+\end{frame}\begin{center}\line(1,0){250}\end{center}
+
+\begin{frame}
+	\frametitle{Perspective Matching}
+	This techniques is used when duplicating an image or when augmenting a digital image into a real world image.\\
+	In essence, a camera is created to match the camera position and properties from the original image\\
+	3DS makes this process reasonably easy; once you know how
+	
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+\begin{frame}
+	\frametitle{Perspective Matching}
+	\begin{figure}
+		\centering
+		\includegraphics[height=5cm]{./img/PerspectiveMatching/loft_large.jpg}
+		\caption[Industrial Loft, Gery Fernagut for monidentitevisuelle.fr]{Industrial Loft, Gery Fernagut for monidentitevisuelle.fr}
+		\label{fig:loftlarge}
+	\end{figure}
+	
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+
+\begin{frame}
+	\frametitle{Perspective Matching}
+	\begin{figure}
+		\centering
+		\includegraphics[height=5cm]{./img/PerspectiveMatching/1.jpg}
+		\caption[Create a plane and a simple reference object]{Create a plane and a simple reference object}
+		\label{fig:PerspectiveMatch1}
+	\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+\begin{frame}
+	\frametitle{Perspective Matching}
+	\begin{figure}
+		\centering
+		\includegraphics[height=5cm]{./img/PerspectiveMatching/2.jpg}
+		\caption[Goto `Tools' and turn on `Perspective Match']{Goto `Tools' and turn on `Perspective Match'}
+		\label{fig:PerspectiveMatch2}
+	\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+
+\begin{frame}
+	\frametitle{Perspective Matching}
+	\begin{figure}
+		\centering
+		\includegraphics[height=5cm]{./img/PerspectiveMatching/3.jpg}
+		\caption[Drag in your reference image]{Drag in your reference image}
+		\label{fig:PerspectiveMatch3}
+	\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+\begin{frame}
+	\frametitle{Perspective Matching}
+	\begin{figure}
+		\centering
+		\includegraphics[height=5cm]{./img/PerspectiveMatching/4.jpg}
+		\caption[Show Vanishing Lines]{Show Vanishing Lines}
+		\label{fig:PerspectiveMatch4}
+	\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+
+\begin{frame}
+	\frametitle{Perspective Matching}
+	\begin{figure}
+		\centering
+		\includegraphics[height=5cm]{./img/PerspectiveMatching/6.jpg}
+		\caption[Vanishing Lines in place]{Vanishing Lines in place}
+		\label{fig:PerspectiveMatch6}
+	\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+
+\begin{frame}
+	\frametitle{Perspective Matching}
+	\begin{figure}
+		\centering
+		\includegraphics[height=5cm]{./img/PerspectiveMatching/7.jpg}
+		\caption[Resuting Perspective Demonstrated]{Resuting Perspective Demonstrated}
+		\label{fig:PerspectiveMatch7}
+	\end{figure}
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
+\begin{frame}
+	\frametitle{Perspective Matching}
+	The final part of the process is to create a camera from the view.  This can be done through the menu system or by entering `Ctrl-C'\\
+	Make sure to rename the camera.
+	
+\end{frame}
+\begin{center}\line(1,0){250}\end{center}
+
+
 
 
 
@@ -1402,7 +1746,7 @@ Special Materials
 \frametitle{Camera Lens - Focal Length}
 \begin{figure}
 	\centering
-	\includegraphics[height=6cm]{img/Camras/15mm.jpg}
+	\includegraphics[height=6cm]{img/Cameras/15mm.jpg}
 	\caption[15mm Camera Lens]{15mm Camera Lens}
 	\label{fig:15mm}
 \end{figure}
@@ -1414,7 +1758,7 @@ Special Materials
 \frametitle{Camera Lens - Focal Length}
 \begin{figure}
 	\centering
-	\includegraphics[height=6cm]{img/Camras/28mm.jpg}
+	\includegraphics[height=6cm]{img/Cameras/28mm.jpg}
 	\caption[28mm Camera Lens]{28mm Camera Lens}
 	\label{fig:28mm}
 \end{figure}
@@ -1426,7 +1770,7 @@ Special Materials
 \frametitle{Camera Lens - Focal Length}
 \begin{figure}
 	\centering
-	\includegraphics[height=6cm]{img/Camras/50mm.jpg}
+	\includegraphics[height=6cm]{img/Cameras/50mm.jpg}
 	\caption[50mm Camera Lens]{50mm Camera Lens}
 	\label{fig:50mm}
 \end{figure}
@@ -1438,7 +1782,7 @@ Special Materials
 \frametitle{Camera Lens - Focal Length}
 \begin{figure}
 	\centering
-	\includegraphics[height=6cm]{img/Camras/135mm.jpg}
+	\includegraphics[height=6cm]{img/Cameras/135mm.jpg}
 	\caption[135mm Camera Lens]{135mm Camera Lens}
 	\label{fig:135mm}
 \end{figure}
@@ -1450,7 +1794,7 @@ Special Materials
 \frametitle{Camera Lens - Focal Length}
 \begin{figure}
 	\centering
-	\includegraphics[height=6cm]{img/Camras/200mm.jpg}
+	\includegraphics[height=6cm]{img/Cameras/200mm.jpg}
 	\caption[200mm Camera Lens]{200mm Camera Lens}
 	\label{fig:200mm}
 \end{figure}
@@ -1463,7 +1807,7 @@ Special Materials
 \frametitle{Camera Lens - Aperture (F-stop)}
 \begin{figure}
 	\centering
-	\includegraphics[height=6cm]{img/Camras/F35Teapots.jpg}
+	\includegraphics[height=6cm]{img/Cameras/F35Teapots.jpg}
 	\caption[F35 - All Objects Sharp]{F35 - All Objects Sharp}
 	\label{fig:200mm}
 \end{figure}
@@ -1476,7 +1820,7 @@ Special Materials
 \frametitle{Camera Lens - Aperture (F-stop)}
 \begin{figure}
 	\centering
-	\includegraphics[height=6cm]{img/Camras/BlueTeapot.jpg}
+	\includegraphics[height=6cm]{img/Cameras/BlueTeapot.jpg}
 	\caption[F2 - Blue Teapot in Focus]{F2 - Blue Teapot in Focus}
 	\label{fig:BlueTeaPot}
 \end{figure}
@@ -1489,7 +1833,7 @@ Special Materials
 \frametitle{Camera Lens - Aperture (F-stop)}
 \begin{figure}
 	\centering
-	\includegraphics[height=6cm]{img/Camras/GreenTeapot.jpg}
+	\includegraphics[height=6cm]{img/Cameras/GreenTeapot.jpg}
 	\caption[F2 - Green Teapot in Focus]{F2 - Green Teapot in Focus}
 	\label{fig:GreenTeaPot}
 \end{figure}
@@ -1501,7 +1845,7 @@ Special Materials
 \frametitle{Camera Lens - Aperture (F-stop)}
 \begin{figure}
 	\centering
-	\includegraphics[height=6cm]{img/Camras/RedTeapot.jpg}
+	\includegraphics[height=6cm]{img/Cameras/RedTeapot.jpg}
 	\caption[F2 - Red Teapot in Focus]{F2 - Red Teapot in Focus}
 	\label{fig:BlueTeaPot}
 \end{figure}
