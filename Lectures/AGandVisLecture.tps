@@ -11,13 +11,13 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1132
-NormalPos.bottom=645
+NormalPos.right=1050
+NormalPos.bottom=443
 Class=LaTeXView
 Document=AGandVisLecture.tex
 
 [Frame0_View0,0]
-TopLine=943
+TopLine=1381
 Cursor=21600
 
 [SessionInfo]
