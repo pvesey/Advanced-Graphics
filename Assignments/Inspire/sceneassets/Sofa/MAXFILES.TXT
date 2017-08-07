@@ -1,0 +1,10 @@
+﻿E:\3D Objects\Turbosquid\Sofa9\VRAY\t$m$p$$$\Sofa09.max
+E:\3D Objects\Turbosquid\Sofa9\VRAY\t$m$p$$$\MAXFILES.TXT
+F:\Textures\Fabric\mpm_vol.07_p07_fabric_3_diff1111.jpg
+F:\Textures\DIRT\dr_8asd.jpg
+F:\Textures\Fabric\mpm_vol.07_p07_fabric_3_diff faloff.jpg
+F:\Textures\Fabric\mpm_vol.07_p07_fabric_3_bump.jpg
+F:\Textures\Fabric\mpm_vol.07_p07_fabric_1_diff111.jpg
+F:\Textures\Fabric\mpm_vol.07_p07_fabric_1_bump.jpg
+F:\Textures\Fabric\yellow-zig-zag-fabric_medium.jpg
+F:\Textures\Fabric\bump 2.jpg
