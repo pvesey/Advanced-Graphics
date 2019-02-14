@@ -72,7 +72,9 @@ Temporary Items
 *.idx
 *.ilg
 *.gz
+*.zip
 *.xdy
 *.ind
 
 >>>>>>> refs/remotes/origin/reveal
+*.psd

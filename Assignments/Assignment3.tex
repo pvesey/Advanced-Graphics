@@ -1,104 +1,95 @@
 \input{HeadMatter.tex}
 	
-\begin{flushleft}
-\Large\textbf{Assignment 3 - Masterpiece (30\%)}\\
-\end{flushleft}
+\part*{Assignment 3 – Modern Residence with V-Ray }
 
-The concept of a masterpiece dates back hundreds of years.  A masterpiece is an object that demonstrates the skill and proficiency of its creator.  In this assignment you are going to demonstrate your mastery of Autodesk 3D Studio Max, and the V-Ray rendering engine by re-creating a single rendered image of a scene of your own creation.  Your creation is to be similar to those shown in Figures \ref{fig:1} to \ref{fig:6}.\\
+\begin{tabularx}{\textwidth}{ |X|X| }
+	\hline
+	\textbf{Issue Date:} & 14$^{th}$ February 2019 \\
+	\hline 
+	\textbf{Submission Date:}  & As stated on Moodle  \\
+	\hline
+\end{tabularx}
 
-The key deliverables of this project are therefore:
+
+\section*{Continuous Assessment Marks}
+This assignment will account for 50\% of the 100\% allocated for continuous assessment in this module
+
+\section*{Assignment Outline}
+In this assignment you will create 5 high quality V-Ray renders from the Revit model provided.  The model has been sourced from \href{https://enscape3d.com/free-sample-projects/}{https://enscape3d.com/free-sample-projects/} and has been upgraded to Revit 2019.\\
+
+You are to create the following renders:
 
 \begin{enumerate}
-	\item Single 3D Studio Max, V-Ray Render (png or jpg of approx 4k resolution)
-	\item 3DS Project folder with all files and assets included
-	\item A 4 page Report on the creation of the image and the work-flow used.
+	\item External view of the building during daylight hours
+	\item External view of the building in twilight, with artificial lights on.
+	\item Internal view of your choice during daylight hours
+	\item Internal view of your choice in twilight, with artificial lights on.
+	\item Internal or External view of your choice.
 \end{enumerate}
 
-This project will take a considerable amount of time to complete.  Final renders may take over an hour to produce.  Success in this project will require an immediate start and at least 4 hours per week in addition to allocated class time.  \\
+You have free reign to edit the materials used in the model as you see fit, however you must keep all model elements and their position as provided.\\
 
-\textbf{Suggested Production Workflow}\\
-Creation of images of the quality shown below requires planning and discipline in both time management and asset management.  I suggest you adopt a structured approach similar to that shown below:
+The following images are provided to illustrate the nature of the request.  Please note that these images were directly from the model and are fall far below the expected standard for this assignment. 
 
-\begin{itemize}
-	\item Each component (asset) to be a separate 3DS file, XRefed into the 'Master' Scene.
-	\item Create each asset fully, including all geometry and materials and run test renders to ensure each asset performs as expected
-	\item Create an empty building model with a default material and light it  appropriately.  It is easier to light the scene when there are less objects within it.  
-	\item Add the materials to the building scene.  Ensure all materials and lighting behave within expected parameters
-	\item Populate the master scene with the building model and other assets and render.
-\end{itemize}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{img/Assignment3a}
+	\caption{External View in Daylight}
+	\label{fig:assignment3a}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{img/Assignment3b}
+	\caption{External View in Twilight.  (Note the sky is not shown)}
+	\label{fig:assignment3b}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{img/Assignment3c}
+	\caption{Internal View in Twilight.}
+	\label{fig:assignment3c}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{img/Assignment3d}
+	\caption{Internal View.}
+	\label{fig:assignment3d}
+\end{figure}
+
+
+
 
 \newpage
-\textbf{Submission}\\
 
-You are required to submit all assets and files used to create your scene.  This includes all materials, models, images, and other items generated.  Create a single zip file of your project folder and upload to Moodle on or before the submission date.\\
+\section*{Production Method}
 
+You should make full use of the tools available to you for the production of these images.  These include the suite of tools available within Revit and V-Ray for materials, lighting, HDR, Image channels, and post production within Photoshop.\\
 
-\input{FileSetup.tex}
+As part of this assignment you are required to submit a one page report on the production methodology used for each image.  This report should include details of the functionality used, exposure values, intensity values, atmospheric or any other effects used in V-Ray.  It should also detail the usage of Photoshop for compositing and any other modifications made. \\
 
-\input{LateSubmission.tex}
-\\
+An asset pack has been made available to you for this assignment.  The asset pack contains the following elements:
 
-\textbf{Factors that will be considered when marking}\\
 \begin{itemize}
-	\item Realism of images
-	\item Lighting
-	\item Materials
-	\item Composition
-	\item Render errors
-	\item Polygon count
+	\item Revit Model sourced from \href{https://enscape3d.com/free-sample-projects/}{https://enscape3d.com/free-sample-projects/}
+	\item HDRs for Lighting sourced from \href{https://hdrihaven.com/}{https://hdrihaven.com/}
+	\item V-Ray RPC proxies are available on the lab machines
+	\item V-Ray materials are available on the lab machines
+	
 \end{itemize}
 
 
 
-\begin{figure}
-	\centering
-		\includegraphics[width=10cm]{img/blackKitchen.jpg}
-	\caption{Black Kitchen by Supardiyono Ono}
-	\label{fig:1}
-\end{figure}
+\section*{Submission}
+Upon completion, create a single zip file of your Revit model, render output, and all production files.  The files should be placed in a logical folder structure reflective of the file content and the production method.  You should also have one folder titled 'FinalRenders' where duplicates of your final images are placed.  Upload this single zip file to Moodle on or before the submission deadline.
 
 
 
-\begin{figure}
-	\centering
-		\includegraphics[width=8cm]{img/AH.jpg}
-	\caption{Adpropeixe House by Bionic Digital}
-	\label{fig:2}
-\end{figure}
-
-
-\begin{figure}
-	\centering
-		\includegraphics[width=10cm]{img/bath1.jpg}
-	\caption{Stylish Bath by Aakash Prabu}
-	\label{fig:3}
-\end{figure}
-
-
-\begin{figure}
-	\centering
-		\includegraphics[width=8cm]{img/8_large.jpg}
-	\caption{Living and Dining Rendering by Gaurav 3d}
-	\label{fig:4}
-\end{figure}
-
-
-
-\begin{figure}
-	\centering
-		\includegraphics[width=10cm]{img/bedroom.jpg}
-	\caption{Interior Design by Chetan Chouhan}
-	\label{fig:5}
-\end{figure}
-
-
-
-\begin{figure}
-	\centering
-		\includegraphics[width=10cm]{img/bath2.jpg}
-	\caption{Bathroom Design by Uros Kovacevic}
-	\label{fig:6}
-\end{figure}
 
 
 
